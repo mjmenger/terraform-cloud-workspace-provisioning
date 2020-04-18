@@ -3,11 +3,13 @@ the demo repository can be found at https://github.com/f5devcentral/terraform-cl
 
 The word *workspace* is overloaded in this README due to HashiCorp naming. It's suggested that you read [this](https://www.terraform.io/docs/cloud/workspaces/index.html) to understand the differences between Terraform Cloud workspaces and workspaces with the Terraform command line. 
 
-We'll be using Terraform command line workspaces to create and manage the state of Terraform Cloud Workspaces.
+We'll be using Terraform command line workspaces to create and manage the state of Terraform Cloud Workspaces. To simplify this, this repository makes assumptions about the names of objects as described in this table. 
 
 |This repo|Demo Repo|Terraform Cloud|
 |---------|:-------:|---------------|
-|has a workspace named x|has a branch named x|creates a workspace named Demo-Repo-x|
+|has a workspace named X|has a branch named X|creates a workspace named Demo-Repo-X|
+
+We'll step you through how to set all of that up below.
 
 ### Setup tfvars file
 You should copy the *terraform.tfvars.example* file to *terraform.tfvars*. Before replacing the dummy values with the values of your own, take a minute or two to review the *.gitignore* file. In particular, 
