@@ -50,4 +50,4 @@ terraform workspace select production
 
 terraform apply
 ```
-If the variables and branches are setup properly, the terraform apply will complete successfully and you should be able to log into Terraform Cloud and use your workspaces.
+If the variables and branches are setup properly, the terraform apply will complete successfully and you should be able to log into [Terraform Cloud](https://app.terraform.io) and run the demo.
