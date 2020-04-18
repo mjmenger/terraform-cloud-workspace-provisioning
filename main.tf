@@ -39,12 +39,12 @@ resource "tfe_policy_set" "policy" {
 # Terraform Cloud Workspace Variables
 #
 resource "tfe_variable" "tfcvars" {
-  for_each = local.tfcvars
+  for_each     = local.tfcvars
   key          = each.key
   value        = each.value.value
   category     = each.value.category # "terraform" or "env"
   hcl          = each.value.hcl
   sensitive    = each.value.sensitive
   workspace_id = tfe_workspace.development.id
-  description  = each.value.description 
+  description  = each.value.description
 }
