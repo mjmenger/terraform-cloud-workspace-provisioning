@@ -26,7 +26,7 @@ You should see that by default we're ignoring tfvars files, assuming they may co
 
 Now you can update your tfvars file, using the guidance provided by the comments from the example file.
 
-### Setup command line workspaces
+### Setup demo repository branches
 As mentioned earlier this repository uses command line workspaces to manage parallel workspaces. For the purpose of the demo, we're creating production, test, and development workspaces to replicate a simplified operations workflow. In a real world scenario you may have seperate repositories for each environment rather than branches in one repository. 
 
 If you are planning to operate this demo in a similar fashion, create branches for each environment in your demo repository (not this one). For example, for the production branch you would;
@@ -34,10 +34,12 @@ If you are planning to operate this demo in a similar fashion, create branches f
 git checkout -b production
 git push origin production
 ```
+### Setup the terraform command line workspaces
 Once you've created the branches and pushed them to origin, you'll create the corresponding command line workspaces. For example, for the production branch you would
 ```
 terraform workspace new production
 ```
+### Create the Terraform Cloud Workspaces
 Once all of the local workspaces have been created you're ready to perform the final step of creating the Terraform Cloud Workspaces.
 
 Before we start with that final step, take a few minutes to review the *main.tf* and *variables.tf* to see how sensitive information flags are being set. This is important so that the value of these variables do not show up in clear text in the Terraform Cloud UI.
