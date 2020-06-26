@@ -14,7 +14,7 @@ resource "tfe_workspace" "development" {
   auto_apply        = (local.target_branch != "production" && local.target_branch != "test")
   operations        = true
   queue_all_runs    = false # set in order to avoid variables race condition when creating the workspace
-  terraform_version = "0.12.24"
+  terraform_version = "0.12.26"
   vcs_repo {
       identifier         = "${var.git_org}/${var.git_repo}"
       branch             = local.target_branch
